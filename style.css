@@ -1,0 +1,325 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Arabic:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+p{
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --spacing-xs:0.5rem;
+    --spacing-s: 1rem;
+    --spacing-m:2.5rem;
+    --spacing-l:3rem;
+    --spacing-xl:6rem;
+    --spacing-xxl:12rem;
+    --nav-clr:lch(60.56% 88.4 136.02);
+    --navbar-bg-clr:#fff;
+    --hero-bg-clr-bottom:#f1f7f3;
+    --hero-bg-clr-top:#c7eff7;
+    --hero-bg-clr-mid:#e9f6f3;
+    --hero-font-main:SegoeSans;
+    --hero-font-secondary:SegoeUI;
+    --hero-sans-font:sans-serif;
+    --font-roboto:Roboto;
+    --font-size-base:1rem;
+    --font-size-s:1.5;
+    --font-size-m:2rem;
+    --font-size-l:4rem;
+    --font-size-xl:6rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-inline:var(--spacing-xl) ;
+    font-family:var(--hero-sans-font);
+    color:#424242;
+  
+  
+}
+
+
+
+.nav.left {
+    display: flex;
+    gap:calc(var(--spacing-s) + 0.3rem);
+    align-content:center;
+    align-items: center;
+}
+
+.nav.left > li:not(:nth-child(1), :nth-child(2), :nth-child(7)){
+    font-size:0.9rem;
+}
+
+.nav.left li:last-of-type{
+    border:1px solid black;
+    padding-inline:1rem;
+    padding-block: 0.4rem;
+    border-radius:3px;
+    color: #141414;
+    flex:0 0 auto;
+    font-size:0.9rem;
+    color:black;
+  
+}
+
+/* .nav.left li:not(.logo, li:nth-child(2), :nth-last-of-type){
+    font-size:4rem;
+    color:red;
+} */
+
+.logo {
+    border-right: 2px solid black;
+    padding-right:var(--spacing-s);
+    padding-bottom:0.3rem;
+    font-size: 1.3rem;
+    font-weight:600;
+    color:#686767;
+    line-height:0.9;
+}
+
+
+
+.logo + li {
+    font-size:1.07rem;
+    font-weight:600;
+}
+
+
+.dropdown-icon {
+    font-size:0.7rem;
+    padding-left:0.4rem;
+}
+
+
+.right {
+    display:flex;
+    gap:1.5rem;
+    align-content:center;
+    align-items: center;
+    margin:0;
+    padding:0;
+    font-size:0.9rem;
+    flex-wrap: wrap;
+}
+
+.nav-right {
+    display: flex;
+}
+
+.container-sm-hero{
+    display: flex;
+    flex-flow:column;
+    gap: var(--spacing-l);
+    padding:var(--spacing-xxl);
+    align-items: center;
+    justify-content: center;
+    background-image:radial-gradient(ellipse at top center, var(--hero-bg-clr-top),var(--hero-bg-clr-mid),var(--hero-bg-clr-bottom),#fff);
+    min-height:70vh;
+    text-align:center;
+}
+
+ h1 {
+    font-family:var(--hero-sans-font);
+    font-size:calc(var(--font-size-l) + 0.6rem);
+    width:30ch;
+    font-weight:500;
+}
+
+.italics-text {
+    font-family: georgia;
+    font-size:calc(var(--font-size-l) + 0.8rem);
+    font-style: italic;
+}
+
+.heading-text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap:var(--spacing-m);
+}
+
+.cta {
+    display: flex;
+    gap:calc(var(--spacing-s) - 0.3rem);
+    flex-wrap: wrap;
+}
+
+.heading-text > p {
+    font-family:var(--font-roboto);
+    font-size:calc(var(--font-size-base) + 0.3rem);
+    color:rgb(100, 100, 100);
+    width:56ch;
+}
+
+
+
+.cta button {
+   
+    border-radius:10px;
+    font-family:var(--font-roboto);
+    
+}
+
+.cta .sign-in-btn{
+    border:none;
+    background-color: #000;
+    color: white;
+    font-size:var(--font-size-s);
+    font-weight:500;
+    border:2px solid transparent;
+    transition:all 0.2s ease-in-out;
+    padding-block:calc(var(--spacing-xs) + 0.3rem);
+    padding-inline:calc(var(--spacing-xs) + 2rem);
+     
+}
+
+.cta .sign-in-btn:hover {
+    background-color:#FFF;
+    color: #000;
+    border-color: black;
+    cursor:pointer;
+}
+
+.cta .buy-btn {
+    background-color:#FFF;
+    border: 2px solid black;
+    padding-inline:calc(var(--spacing-xs) + 2rem);
+    font-weight:450;
+    font-size:var(--font-size-s);
+    flex:1;
+}
+
+
+
+.copilot {
+    display: inline-block;
+}
+
+.copilot::first-letter{
+    font-size:5.9rem;
+}
+
+main h2 {
+    font-family: var(--hero-sans-font);
+    font-size:2.5rem;
+    font-weight:500;
+    margin-left:10rem;
+    margin-top:2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <link rel="stylesheet" type="text/css" crossorigin="anonymous" href="https://res.cdn.office.net/officehub/bundles/unauth-mcm-bebop-1ff4cae7a4.css" integrity="sha256-xpugc5WmZwHd80cy4XqsnqwlmgotdS+J1T0hc8Ax59E="> */
