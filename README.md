@@ -15,7 +15,7 @@ Live Demo
 
 
 
-View the live website
+![View the live website](https://abdel-devhub.github.io/Microsoft-365-hero-page/)
 
 
 
